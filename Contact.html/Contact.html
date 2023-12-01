@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Home.css">
+    <script src="https://kit.fontawesome.com/7f166df99d.js" crossorigin="anonymous"></script>
+
+
+    <style>
+
+
+#mainblock{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 40px;
+}
+
+i{  
+    padding-top: 20px;
+} 
+
+.name{
+   
+    border: 0;
+    margin: 0;
+    height: 40px;
+    font-size: 25px;
+    font-style: italic;
+    font-weight: bold;
+    width: 100%;
+    padding-left: 15px;
+    text-shadow: 0.5px 0.5px gray;
+    background-image: linear-gradient(30deg,#9BBEC8,#427D9D,#61A3BA);
+}
+ 
+.about{
+    text-align: center;
+    font-family: cursive;
+    text-shadow: 1px 1px gray;
+    font-weight: 500;
+    font-size: 30px;
+    
+}
+
+.shift1 p{
+    text-align: center;
+    margin: 0%;
+    
+}
+.down{
+    margin-top: 200px;
+    
+}
+.fix p{
+    padding-left:150px ;
+    width:50%;
+    height:80px;
+    padding-top: 35px;
+}
+.fix i{
+    padding-left: 150px;
+    margin-top: 20px;
+}
+.set img{
+    width: 400px;
+    height:300px;
+    justify-items: center;
+    margin-left: 80px;
+}
+.fix b{
+    color: red;
+}
+#mainblock .set img{
+    border-radius: 20px;
+}
+.set1{
+    padding-left: 150px;
+}
+.set2{
+    display: flex;
+    width: 85%;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+.msg{
+    display: block;
+    resize: none;
+    font-size:large;
+}
+.space{
+    padding-top: 5px;
+}
+.btn{
+    margin-left: 320px;
+    font-size: large;
+    width: 80px;
+    height: 30px;
+    color:white;
+    background-color: black;
+    border-radius: 20px;
+}
+.broad{
+    width: 150px;
+    height: 30px;
+    font-size:medium;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+nav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+</style>
+  </head>
+  <body>    
+
+    <div>
+        <div  class="name">
+            <i class="fa-solid fa-book-open fa-xl"></i>
+            BookInGo
+
+        </div>
+       
+        
+    </div>
+
+    <nav>
+        <a href="<?= scriptUrl ?>">Home</a>
+        <a href="<?= scriptUrl ?>?s=About">About</a>
+        <a href="<?= scriptUrl ?>?s=Contact">Contact Us</a>
+        <a href="<?= scriptUrl ?>?s=Features">Features</a>
+        
+    </nav>
+    <div class="hello" id="Home">
+    
+    <div class="shift1">
+        <p class="about">Reach Out</p>
+        <p> We'll love your feedback!!</p>
+    </div>
+    
+    <div id="mainblock">
+        <div class="set"> 
+            <img src="https://cdn.pixabay.com/photo/2016/03/27/16/24/smartphone-1283012_1280.jpg" alt="Load Again">
+        </div>
+        <div class="fix">
+            <i> GLA,Mathura</i>
+                   <br>
+                <i>Phone: +00 151515</i> 
+                   <br>
+                <i>Email: support@mail.com</i> 
+                   <br>
+            
+            <div class="fix">
+                <p>Please share your valuable feedback because feedback always makes us better.<br><b class="thnk">Thank You</b></p>
+                <div class="set1">
+                    <div class="space">
+                    <div>
+                      <div class="set2">
+                        <input type="text" name="Name" placeholder="Name:" class="broad" id="Namef"><br>
+                        <input type="text" name="Email" placeholder="Email:" class="broad" id="Emailf"><br>
+                      </div>
+                      <label for="yourself"></label>
+                      <textarea name="myText" placeholder="Feedback:" class="msg"  cols="42" rows="4" id="yourself"></textarea>
+                    </div>
+                      <br>
+                                 <div id="Message_Banner2">
+                  </div>
+                    <button class='btn' onclick="Feedback()">
+                       Send
+                     
+                    </button>
+           
+                    </div>
+                    
+                    
+                  </div>
+
+    <?!= include('javascript'); ?>  
+  </body>
+</html>
+

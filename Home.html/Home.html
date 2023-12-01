@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Home.css">
+    <script src="https://kit.fontawesome.com/7f166df99d.js" crossorigin="anonymous"></script>
+
+
+    <style>
+.first-font{
+    text-align: center;
+    padding-left: 100px;
+    height: 150px;
+    width: 80%;
+
+}
+
+#mainblock{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 40px;
+}
+#mainbox{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 150px;
+    margin-top: 100px;
+
+}
+.shift img{
+    width: 250px;
+    height: 250px;
+    padding-top: 20px;
+}
+.shift{
+    width: 300px;
+    height: 300px;
+
+}
+
+
+li {
+    display: inline;
+    margin: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    padding-bottom: 30px;
+    
+}
+li a{
+    text-decoration: none;
+    color: black;
+    
+}
+li a:hover{
+    color:whitesmoke;
+    width: 10px;
+    height: 10px;
+}
+i{  
+    padding-top: 20px;
+} 
+
+.name{
+   
+    border: 0;
+    margin: 0;
+    height: 40px;
+    font-size: 25px;
+    font-style: italic;
+    font-weight: bold;
+    width: 100%;
+    padding-left: 15px;
+    text-shadow: 0.5px 0.5px gray;
+    background-image: linear-gradient(30deg,#9BBEC8,#427D9D,#61A3BA);
+}
+.hello{
+    background-image: url(https://get.wallhere.com/photo/depth-of-field-books-library-bokeh-color-book-design-screenshot-personal-computer-hardware-firearm-74960.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 80vh;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+.about{
+    text-align: center;
+    font-family: cursive;
+    text-shadow: 1px 1px gray;
+    font-weight: 500;
+    font-size: 30px;
+    
+}
+
+.shift1 p{
+    text-align: center;
+    margin: 0%;
+    
+}
+.down{
+    margin-top: 200px;
+    
+}
+.fix p{
+    padding-left:150px ;
+    width:50%;
+    height:80px;
+    padding-top: 35px;
+}
+.fix i{
+    padding-left: 150px;
+    margin-top: 20px;
+}
+.set img{
+    width: 400px;
+    height:300px;
+    justify-items: center;
+    margin-left: 80px;
+}
+.fix b{
+    color: red;
+}
+#mainblock .set img{
+    border-radius: 20px;
+}
+.set1{
+    padding-left: 150px;
+}
+.set2{
+    display: flex;
+    width: 85%;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+.msg{
+    display: block;
+    resize: none;
+    font-size:large;
+}
+.space{
+    padding-top: 5px;
+}
+.btn{
+    margin-left: 320px;
+    font-size: large;
+    width: 80px;
+    height: 30px;
+    color:white;
+    background-color: black;
+    border-radius: 20px;
+}
+.broad{
+    width: 150px;
+    height: 30px;
+    font-size:medium;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+nav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: #f2f2f2;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+</style>
+  </head>
+  <body>    
+
+    <div>
+        <div  class="name">
+            <i class="fa-solid fa-book-open fa-xl"></i>
+            BookInGo
+
+        </div>
+       
+        
+    </div>
+
+    <nav>
+        <a href="<?= scriptUrl ?>">Home</a>
+        <a href="<?= scriptUrl ?>?s=About">About</a>
+        <a href="<?= scriptUrl ?>?s=Contact">Contact Us</a>
+        <a href="<?= scriptUrl ?>?s=Features">Features</a>
+        <!-- <div class="dropdown">
+            <button class="dropbtn">Features</button>
+            <div class="dropdown-content">
+                <a href="javascript:void(0);" id="tabAddBooks">Add Books</a>
+                <a href="javascript:void(0);" id="tabCheckoutBooks">CheckOut Books</a>
+                <a href="javascript:void(0);" id="tabCheckinBooks">CheckIn Books</a>
+            </div>
+        </div> -->
+    </nav>
+    <div class="hello" id="Home">
+    
+    </div>
+  
+    <div class="first-font">
+        <p class="about" id="About">About us</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga totam praesentium quisquam rem tempora consequuntur tenetur vitae, facilis eaque, ab amet dignissimos quibusdam vero placeat animi ad repellendus. Nisi, neque soluta. Optio expedita dolores magnam, consequatur explicabo minima voluptas atque?</p>
+    </div> 
+    <div id="mainblock">
+        <div class="shift">
+            <img src="https://images.pexels.com/photos/159778/books-reading-series-narnia-159778.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Try again">
+            <h3>Fiction</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nobis doloremque, similique distinctio voluptas suscipit voluptatem vel tenetur, recusandae in doloribus deleniti cum obcaecati quas dolorem quidem consequatur earum veritatis!</p>
+            <br><br><br>
+        </div>
+        <div class="shift">
+            <img src="https://images.pexels.com/photos/18860010/pexels-photo-18860010/free-photo-of-a-bookstore-interior.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Try again">
+            <h3>Engineering</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi ullam dicta suscipit aut culpa a, sit error! Aut iste officiis consequuntur numquam, quia facilis deserunt, qui rem, possimus culpa omnis? Quisquam laudantium quasi aspernatur repellendus.</p>
+            <br><br><br>
+        </div>
+        <div class="shift">
+            <img src="https://images.pexels.com/photos/6077123/pexels-photo-6077123.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Try again">
+            <h3>Law Books</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis rerum sequi recusandae repellendus distinctio aperiam. Distinctio sapiente tenetur impedit dolores adipisci eos cum accusamus excepturi atque odio aliquid, eius sit!</p>
+            <br><br><br>
+        </div>
+        </div>
+        <div id="mainbox">
+        <div class="shift">
+            <img src="https://wallpaperaccess.com/full/1592517.jpg" alt="Try again">
+            <h3>Civil Services</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nobis doloremque, similique distinctio voluptas suscipit voluptatem vel tenetur, recusandae in doloribus deleniti cum obcaecati quas dolorem quidem consequatur earum veritatis!</p>
+            <br><br><br>
+        </div>
+        <div class="shift">
+            <img src="https://img.freepik.com/premium-photo/concept-medical-education-isolated-white-background_185193-102374.jpg?w=996" alt="Try again">
+            <h3>Medical Books</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi ullam dicta suscipit aut culpa a, sit error! Aut iste officiis consequuntur numquam, quia facilis deserunt, qui rem, possimus culpa omnis? Quisquam laudantium quasi aspernatur repellendus.</p>
+            <br><br><br>
+        </div>
+        <div class="shift">
+            <img src="https://images.pexels.com/photos/1907785/pexels-photo-1907785.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Try again">
+            <h3>Competetive Books</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis rerum sequi recusandae repellendus distinctio aperiam. Distinctio sapiente tenetur impedit dolores adipisci eos cum accusamus excepturi atque odio aliquid, eius sit!</p>
+            <br><br><br>
+        </div>
+    </div>
+    <hr class="down" id="Contact">
+    <div class="shift1">
+        <p class="about">Reach Out</p>
+        <p> We'll love your feedback!!</p>
+    </div>
+    
+    <div id="mainblock">
+        <div class="set"> 
+            <img src="https://cdn.pixabay.com/photo/2016/03/27/16/24/smartphone-1283012_1280.jpg" alt="Load Again">
+        </div>
+        <div class="fix">
+            <i> GLA,Mathura</i>
+                   <br>
+                <i>Phone: +00 151515</i> 
+                   <br>
+                <i>Email: support@mail.com</i> 
+                   <br>
+            
+            <div class="fix">
+                <p>Please share your valuable feedback because feedback always makes us better.<br><b class="thnk">Thank You</b></p>
+                <div class="set1">
+                    <div class="space">
+                    <div>
+                      <div class="set2">
+                        <input type="text" name="Name" placeholder="Name:" class="broad" id="Namef"><br>
+                        <input type="text" name="Email" placeholder="Email:" class="broad" id="Emailf"><br>
+                      </div>
+                      <label for="yourself"></label>
+                      <textarea name="myText" placeholder="Feedback:" class="msg"  cols="42" rows="4" id="yourself"></textarea>
+                    </div>
+                      <br>
+                      <div id="Message_Banner2">
+            </div>
+                    <button class='btn' onclick="Feedback()">
+                       Send
+                    </button>
+                    </div>
+                    
+                    
+                  </div>
+
+
+    <?!= include('javascript'); ?>
+  </body>
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <style>
+      /* Add these CSS styles in a <style> block or a separate CSS file */
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: flex;
+  font-weight: bold;
+  color: #F4F2DE;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 75%;
+  height:10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 16px;
+  background-color:#D0D4CA;
+  color:#555843;
+}
+
+.add-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.add-button:hover {
+  background-color: #0056b3;
+}
+
+.result-message {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #009900;
+}
+
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+       
+      }
+
+      ul.tabs {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        background-color: #333;
+        overflow: hidden;
+        
+      }
+
+      li {
+        float: left;
+        
+      }
+
+      li a {
+        display:inline-flex;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      li a:hover {
+        background-color: #555;
+      }
+
+      .tab-content {
+        padding-top: 10px;
+        display: none;
+        padding: 20px;
+        color: #A1CCD1;
+        text-shadow: 3px 3px black;
+        background-color: rgba(0,0,0,0.01);
+
+      }
+      .form-format{
+        color:black;
+        width: 400px;
+
+      }
+      #mainblock{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .div1{
+        display: inline;
+    
+      }
+      #rr{
+        position: absolute;
+        margin-top:100px;
+        margin-left: 20px;
+        margin-right: 600px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+
+      }
+      .div2{
+    
+        width: 500px;
+        height: 500px;
+    
+      }
+      div h2{
+        text-align: center;
+        padding-top: 135px;
+      }
+      div p{
+        text-align: center;
+        color: beige;
+      }
+      button{
+        margin-top: 10px;
+        width: 80px;
+        height: 35px;
+        border-radius: 20px;
+        background-color: #555;
+        color: azure;
+        text-shadow: 2px 2px black;
+        
+      }
+   
+    </style>
+  </head>
+  <body>
+    
+    <ul class="tabs">
+      <li><a href="javascript:void(0);" id="tabAddBooks" onclick="clearMSG()">Add Books</a></li>
+      <li><a href="javascript:void(0);" id="tabCheckoutBooks" onclick="clearMSG()">Checkout Books</a></li>
+      <li><a href="javascript:void(0);" id="tabCheckinBooks" onclick="clearMSG()">Checkin Books</a></li>
+    </ul> 
+    
+        <div id="Message_Banner">
+            </div>
+         <div id="mainblock">
+          <div class="div2">
+            <img src="https://cdn.pixabay.com/photo/2018/01/18/20/43/literature-3091212_1280.jpg" alt="">
+          </div>
+          <div class="div1" id="rr">
+            <div id="addBooksTab" class="tab-content">
+                <!--h1>Add Books</h1>
+                <div id="addBooksTab2" class="tab-content"-->
+            <h1>Add Books</h1>
+            <form id="addBookForm" class="form-format">
+              <label for="title">Title:</label>
+              <input type="text" id="title" name="title"><br>
+          
+              <label for="Bookid">Book ID:</label>
+              <input type="text" id="Bookid" name="Bookid"><br>
+          
+              <label for="author">Author:</label>
+              <input type="text" id="author" name="author"><br>
+          
+              <label for="isbn">ISBN:</label>
+              <input type="text" id="isbn" name="isbn"><br>
+          
+              <label for="genre">Genre:</label>
+              <input type="text" id="genre" name="genre"><br>
+          
+              <label for="publishedYear">Published Year:</label>
+              <input type="number" id="publishedYear" name="publishedYear"><br>
+
+              <button type="button" onclick="addBook()">Add Book</button>
+        
+            </form>
+            <p id="addBookResult"></p>
+          
+      </div>  
+   
+      
+      <!-- Add Books content goes here -->
+    
+    
+
+   
+    
+    <div id="checkoutBooksTab" class="tab-content">
+      <h1>Checkout Books</h1>
+      <!-- Checkout Books content goes here -->
+    <form id="checkoutBookForm">
+    
+    <label for="Bookid">Book ID:</label>
+    <input type="text" id="Bookid2" name="Bookid"><br>
+
+    <label for="BorrowerName">Borrower Name:</label>
+    <input type="text" id="BorrowerName" name="BorrowerName"><br>
+
+    <label for="BorrowerEmail">Borrower Email:</label>
+    <input type="text" id="BorrowerEmail" name="BorrowerEmail"><br>
+
+    <button type="button" onclick="checkOutBook()">Checkout Book</button>
+  </form>
+    </div>
+      
+    
+  
+    <div id="checkinBooksTab" class="tab-content">
+      <h1>Checkin Books</h1>
+      <!-- Checkin Books content goes here -->
+      <form id="checkoutBookForm">
+    
+    <label for="Bookid">Book ID:</label>
+    <input type="text" id="Bookid3" name="Bookid"><br>
+
+    <label for="BorrowerName">Borrower Name:</label>
+    <input type="text" id="BorrowerName" name="BorrowerName"><br>
+
+    <button type="button" onclick="checkinBook()">Checkin Book</button>
+  </form>
+    
+      
+    </div>
+          </div>
+         </div>
+        
+    <script>
+      document.getElementById("tabAddBooks").addEventListener("click", function() {
+        showTab("addBooksTab");
+      });
+
+      document.getElementById("tabCheckoutBooks").addEventListener("click", function() {
+        showTab("checkoutBooksTab");
+      });
+
+      document.getElementById("tabCheckinBooks").addEventListener("click", function() {
+        showTab("checkinBooksTab");
+      });
+
+      function showTab(tabId) {
+        var tabs = document.getElementsByClassName("tab-content");
+        for (var i = 0; i < tabs.length; i++) {
+          tabs[i].style.display = "none";
+        }
+
+        document.getElementById(tabId).style.display = "block";
+      }
+
+      // Initially show the Add Books tab
+      showTab("addBooksTab");
+    </script>
+    <?!= include('javascript'); ?>  
+  </body>
+</html>
